@@ -21,10 +21,12 @@ body{
 
 header{
     padding: 50px;
+    overflow: hidden;
 }
 
 header > #logo{
     font-size: 2em;
+    float: left;
 }
 
 main{
@@ -35,6 +37,10 @@ main{
 section{
     width: 70%;
     float: left;
+}
+
+nav{
+    float: right; 
 }
 
 aside{
