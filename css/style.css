@@ -7,7 +7,7 @@ h2, h3{
 }
 
 body{
-    background-color: #4586de;
+    background-color: #ffdbe7;
     margin: 20px 0;
     font-family: sans-serif;
 }
@@ -46,7 +46,7 @@ nav{
 aside{
     width: 30%;
     float: right;
-    background-color: rgb(198, 255, 255);
+    background-color: #fff2f6;
     padding: 10px;
 }
 
@@ -57,17 +57,21 @@ footer{
 }
 
 aside h3{
-    background-color: rgb(226, 122, 122);
-    color: white;
+    background-color: #ffff;
+    color: #ff83a8;
     padding: 10px;
 
 }
 
 article{
-    padding: 30px 0;
+    padding: 30px 20px 0 0;
     border-bottom: 1px solid gray;
 }
 
 article:last-child{
     border-bottom: 0px;
 }
+
+li{
+    padding: 5px;
+} 
