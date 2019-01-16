@@ -1,77 +1,71 @@
 *{
-   box-sizing: border-box; 
-}
-
-h2, h3{
     margin: 0;
+    padding: 0;
 }
 
 body{
-    background-color: #ffdbe7;
-    margin: 20px 0;
     font-family: sans-serif;
 }
 
 .wrapper{
-    width: 800px;
-    margin: 0 auto; 
-    background-color: white;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title title"
+    "header header"
+    "sidebar sidebar"
+    "content content"
+    "footer footer";
 }
 
-header{
-    padding: 50px;
-    overflow: hidden;
+.wrapper div:nth-child(even) {
+    background-color: rgb(235, 254, 255);
 }
 
-header > #logo{
-    font-size: 2em;
-    float: left;
+.wrapper div:nth-child(odd) {
+    background-color: rgb(200, 255, 223);
 }
 
-main{
-    padding: 50px;
-    overflow: hidden;
-}
-
-section{
-    width: 70%;
-    float: left;
-}
-
-nav{
-    float: right; 
-}
-
-aside{
-    width: 30%;
-    float: right;
-    background-color: #fff2f6;
-    padding: 10px;
-}
-
-footer{
+.title{
+    grid-area: title;
     padding: 20px;
-    border-top: 1px solid #ccc;
-    text-align: center;
 }
 
-aside h3{
-    background-color: #ffff;
-    color: #ff83a8;
-    padding: 10px;
+.header{
+    grid-area: header;
+}
 
+.sidebar{
+    grid-area: sidebar;
+    padding: 20px;
+}
+
+.content{
+    grid-area: content;
+    
+}
+
+.footer{
+    grid-area: footer;
+    padding: 10px;
+}
+
+@media screen and (min-width: 736px)
+{
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". title title ."
+    ". header header ."
+    ". content sidebar ."
+    ". footer footer ."; 
+  } 
 }
 
 article{
-    padding: 30px 20px 0 0;
-    border-bottom: 1px solid gray;
+    margin: 20px;
 }
 
-article:last-child{
-    border-bottom: 0px;
-}
-
-li{
-    padding: 5px;
-} 
