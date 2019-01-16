@@ -15,6 +15,7 @@ body{
     "title title"
     "header header"
     "sidebar sidebar"
+    "navbar navbar"
     "content content"
     "footer footer";
 }
@@ -52,6 +53,7 @@ body{
 .footer{
     grid-area: footer;
     padding: 10px;
+    text-align: center;
 }
 
 @media screen and (min-width: 736px)
@@ -61,8 +63,9 @@ body{
     grid-template-columns: 1fr 500px 500px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". title title ."
+    ". title navbar ."
     ". header header ."
+    ". navbar navbar ."
     ". content sidebar ."
     ". footer footer ."; 
   } 
@@ -88,6 +91,8 @@ li{
 
 .navbar> a{
     padding: 10px;
+    grid-area: navbar;
+    
     
 }
 
