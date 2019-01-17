@@ -15,38 +15,41 @@ body{
     "title title"
     "header header"
     "sidebar sidebar"
-    "navbar navbar"
     "content content"
     "footer footer";
 }
 
-.wrapper div:nth-child(even) {
-    background-color: rgb(235, 254, 255);
-}
-
-.wrapper div:nth-child(odd) {
-    background-color: rgb(200, 255, 223);
-}
 
 .title{
     grid-area: title;
-    padding: 20px;
+    padding: 10px;
+    background-color: rgb(200, 255, 223);
 }
+   
+
 
 .header{
     grid-area: header;
     background-color: transparent;
-    
+    background-color: rgb(200, 255, 223);
 }
+
 
 .sidebar{
     grid-area: sidebar;
     padding: 20px;
+    background-color: rgb(200, 255, 223);
+    
 }
+   
+
+
+
 
 .content{
     grid-area: content;
     font-size: 14px;
+    background-color: rgb(235, 254, 255);
     
 }
 
@@ -54,6 +57,7 @@ body{
     grid-area: footer;
     padding: 10px;
     text-align: center;
+    background-color: rgb(200, 255, 223);
 }
 
 @media screen and (min-width: 736px)
@@ -63,12 +67,23 @@ body{
     grid-template-columns: 1fr 500px 500px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". title navbar ."
+    ". title title ."
     ". header header ."
-    ". navbar navbar ."
     ". content sidebar ."
+    ". content empty ."
+    ". content empty ."
+    ". content empty ."
+    ". content empty ."
+    ". content empty ."
     ". footer footer ."; 
   } 
+  .sidebar{
+    grid-row: 500px;
+    grid-row: 3 / 4;
+    grid-area: sidebar;
+    
+  }
+  
 }
 
 article{
@@ -76,7 +91,7 @@ article{
 }
 
 h1{
-    color: rgb(156, 79, 228);
+    color: rgb(204, 163, 241);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
     
 }
@@ -89,10 +104,10 @@ li{
     padding: 2px;
 }
 
-.navbar> a{
-    padding: 10px;
-    grid-area: navbar;
-    
+.empty{
+    background-color: rgb(235, 254, 255);
+    grid-area: empty;
+    grid-row: 4 / 9;
     
 }
 
